@@ -66,3 +66,38 @@ Then('user sees the button with name {string}', async function (string) {
     const actual = await this.page.$eval(btnSelector, link => link.textContent);
     assert.equal(actual, 'Получить код бронирования');
 });
+
+// Given(
+//     'user is on {string} page',
+//     { timeout: 60 * 1000 },
+//     async function (string) {
+//         return await this.page.goto('http://qamid.tmweb.ru/client/index.php', {
+//             setTimeout: 60000,
+//         });
+//     },
+// );
+
+// When('user selects show {int} and time {int}', async function (int, int2) {
+//     const timeSelector =
+//         'body > main > section:nth-child(' +
+//         int +
+//         ') > div:nth-child(' +
+//         int2 +
+//         ') > ul > li > a';
+//     await this.page.waitForSelector(timeSelector);
+//     await this.page.click(timeSelector);
+// });
+
+// Then(
+//     'user can not select chosen show and time {string}',
+//     async function (string) {
+//         // const btnSelector = 'body > main > section > div > button';
+//         // await this.page.waitForSelector(btnSelector, {
+//         //     visible: true,
+//         // });
+//         const actual = await page.$eval(time, link => link.className);
+//         expect(actual).toContain(
+//             'movie-seances__time acceptin-button-disabled',
+//         );
+//     },
+// );
