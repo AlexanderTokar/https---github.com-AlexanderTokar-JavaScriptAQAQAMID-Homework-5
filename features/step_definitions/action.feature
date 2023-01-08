@@ -14,3 +14,8 @@ Scenario: Should buy another ticket
         And user clicks row 8 and seat 5
         And user clicks submit button
     Then user sees the button with name "Получить код бронирования"
+
+# Scenario: Should not buy ticket
+#     Given user is on "Идем в кино" page
+#     When user selects show 2 and time 3
+#     Then user can not select chosen show and time
